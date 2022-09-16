@@ -4,16 +4,18 @@
 /**
  *print_numbers - Print numbers from 0 to 9
  *
- *
+ *@c: Number
  *
  *
  */
 void print_numbers(void)
 {
-	int i;
+	char a = 0;
 
-	for (i = 0; i < 10; i++)
-		_putchar ((i % 10) + '0');
-	_putchar ('\n');
-
+	while (a <= 9)
+	{
+		_putchar(a + '0');
+		a++;
+	}
+	_putchar('\n');
 }
