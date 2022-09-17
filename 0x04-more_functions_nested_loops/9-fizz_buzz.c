@@ -19,16 +19,16 @@ int main(void)
 	for (num = 1; num < 101; num++)
 	{
 		if ((num % 15) == 0)
-			printf("FizzBuzz\t");
+			printf("FizzBuzz");
 
 		else if ((num % 3) == 0)
-			printf("Fizz\t");
+			printf("Fizz");
 
-		else if ((num %5) == 0)
-			printf("Buzz\t");
+		else if ((num % 5) == 0)
+			printf("Buzz");
 
 		else
-			printf("%d\t", num);
+			printf("%d", num);
 
 
 		printf(" ");
