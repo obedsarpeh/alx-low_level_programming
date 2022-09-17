@@ -19,17 +19,22 @@ int main(void)
 	for (num = 1; num < 100; num++)
 	{
 		if ((num % 3) == 0)
-			printf("fizz");
+			printf("Fizz");
 
 		else if ((num % 5) == 0)
-			printf("buzz");
+			printf("Buzz");
 
-		else if ((num % 3 && num % 5) == 0)
-			printf("fizz_buzz");
+		else if ((num % 3) == 0 && (num % 5) == 0)
+			printf("FizzBuzz");
 
 		else
-			printf("%d\n", num);
+			printf("%d", num);
+
+		if (num == 100)
+		continue;
+		printf(" ");
 	}
+
 	return (0);
 
 }
