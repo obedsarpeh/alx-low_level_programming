@@ -11,9 +11,10 @@
  */
 int main(void)
 {
-	int n, sum_m = 0;
+	int n;
+	int sum_m = 0;
 
-	for (n = 0; n < 1024; n++)
+	for (n = 1; n < 1024; n++)
 	{
 		if ((n % 3) == 0 || (n % 5) == 0)
 			sum_m += n;
