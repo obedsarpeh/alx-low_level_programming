@@ -26,9 +26,11 @@ int main(void)
 
 		if (r_ead == 98)
 			printf("\n");
+
 		else
 			printf(",");
 		printf(" ");
+		continue;
 	}
 	return (0);
 }
