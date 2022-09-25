@@ -24,7 +24,7 @@ int main(void)
 		f1 = f2;
 		f2 = sum;
 
-		if (r_ead == 98)
+		if (r_ead == 94)
 			printf("\n");
 
 		else
@@ -32,5 +32,6 @@ int main(void)
 		printf(" ");
 		continue;
 	}
+	printf("\n");
 	return (0);
 }
