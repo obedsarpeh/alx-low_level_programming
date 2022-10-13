@@ -1,3 +1,5 @@
+#ifndef STRUCT
+#define STRUCT
 /**
  * struct dog - new struct dog
  *
@@ -9,7 +11,8 @@
  */
 struct dog
 {
-	char * name;
+	char *name;
 	float age;
-	char * owner;
+	char *owner;
 };
+#endif
