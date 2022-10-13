@@ -2,7 +2,7 @@
 #include <stdlib.h>
 /**
  * init_dog - description of dog
- * @d: to be initialized 
+ * @d: to be initialized
  * @name: pointer to char
  * @age: pointer to age
  * @owner: pointer to owner
