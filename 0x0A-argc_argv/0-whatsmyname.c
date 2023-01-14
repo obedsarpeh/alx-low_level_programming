@@ -1,13 +1,15 @@
 #include <stdio.h>
+#include <stdlib.h>
 /**
  * main -  writes its name
- * @argc: arguement count
+ * @argc: argument count
  * @argv: array of pointers to arguement strings
  * Return: 0
  **/
-int main(int argc, char *argv[])
+int main(__attribute__((unused))int argc, char *argv[])
 {
-	argc = argc;
+	argc = 0; /*argc = argc */
 	printf("%s\n", *argv);
-	return (0);
+	/* return (0); */
+	exit(EXIT_SUCCESS);
 }
