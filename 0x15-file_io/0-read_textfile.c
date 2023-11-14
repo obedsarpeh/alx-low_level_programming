@@ -12,11 +12,13 @@
 *
 */
 
-ssize_t read_textfile(const char *filename, __attribute__((unused)) size_t letters)
+ssize_t read_textfile(const char *filename, size_t letters)
 {
         FILE *file;
         char ch;
-
+	char *buffer;
+	ssize_t bytes_read;
+	ssize_t bytes_written;
 
         if (filename == NULL)
         {
@@ -32,10 +34,28 @@ ssize_t read_textfile(const char *filename, __attribute__((unused)) size_t lette
                 ch = fgetc(file);
 		printf("%c", ch);
 	}
-/*	size_t letters = strlen(ch);
-	printf("printed chars:%c ", ch);
-	return (0);
-*/
+	buffer = malloc(letters + 1);
+	if (buffer == NULL)
+	{
+		fclose(file);
+		return (0);
+	}
+	bytes_read = fread(buffer, 1, letters, file);
+	if (bytes_read < 0)
+	{
+		free(buffer);
+		fclose(file);
+		return 0;
+	}
+	buffer[bytes_read] = '\0';
+	bytes_written = write(STDOUT_FILENO, buffer, bytes_read);
+	if (bytes_written < 0 || bytes_written != bytes_read)
+	{
+		free(buffer);
+		fclose(file);
+		return 0;
+       	}
+	free(buffer);
 	fclose(file);
-	return (0);
+	return (bytes_read);
 }
